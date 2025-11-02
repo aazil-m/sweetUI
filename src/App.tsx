@@ -1,5 +1,9 @@
+// src/App.tsx
 import "./styles/tokens.css";
-import { Button, Card } from "./components";
+import React from "react";
+import Dashboard from "./pages/Dashboard"; // ← make sure the file exists
+import { Card } from "./components/Card";
+import { Button } from "./components/Button";
 
 export default function App() {
   return (
@@ -15,11 +19,13 @@ export default function App() {
         style={{
           color: "var(--sweet-primary)",
           fontSize: "var(--sweet-text-lg)",
+          marginBottom: "var(--sweet-space-3)",
         }}
       >
-        SweetUI Primitives ⚙️
+        SweetUI — Dashboard
       </h1>
 
+      <Dashboard />
       <Card title="Token-driven Components" style={{ marginTop: "var(--sweet-space-3)" }}>
         <div style={{ display: "flex", gap: "var(--sweet-gap)" }}>
           <Button variant="primary">Primary</Button>
@@ -27,6 +33,6 @@ export default function App() {
           <Button variant="warning">Warning</Button>
         </div>
       </Card>
-    </div>
+          </div>
   );
 }
