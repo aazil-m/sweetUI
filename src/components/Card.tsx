@@ -10,7 +10,7 @@ export interface CardProps {
 export const Card: React.FC<CardProps> = ({ title, children, style }) => (
   <div
     style={{
-      background: "var(--sweet-surface)",
+      background: "#fff",                          // 👈 white card on light surface
       boxShadow: "var(--sweet-elevation-1)",
       borderRadius: "var(--sweet-radius-md)",
       padding: "var(--sweet-space-3)",
