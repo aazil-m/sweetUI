@@ -222,6 +222,10 @@ npm run lint     # ESLint
 
 ---
 
+## 12) Screenshots
+<img width="2526" height="1118" alt="image" src="https://github.com/user-attachments/assets/5518ad10-6593-41a3-b782-1b793a710e0c" />
+
+
 ## License
 
 MIT — Manipal Institute of Technology
