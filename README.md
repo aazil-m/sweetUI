@@ -223,8 +223,21 @@ npm run lint     # ESLint
 ---
 
 ## 12) Screenshots
+<img width="2557" height="1331" alt="Screenshot 2025-11-02 202704" src="https://github.com/user-attachments/assets/48063d10-4ab4-4bcc-aa6c-cde21a5d5422" />
+
+<img width="2559" height="1334" alt="Screenshot 2025-11-02 202710" src="https://github.com/user-attachments/assets/e2562268-eb04-4d4e-92cb-54c343a5cde7" />
+
+<img width="2532" height="1336" alt="Screenshot 2025-11-02 202726" src="https://github.com/user-attachments/assets/82ed69f5-0bcf-4cf3-a15a-637fde85eb95" />
+
 <img width="2526" height="1118" alt="image" src="https://github.com/user-attachments/assets/5518ad10-6593-41a3-b782-1b793a710e0c" />
 
+## My AI Usage
+The development of SweetUI followed a structured, AI-assisted workflow from concept to deployment.
+Using Figma’s AI design generation, the initial SweetUI Design System — including color tokens, typography, spacing, and component guidelines — was automatically created and exported as CSS variables. I then collaborated with ChatGPT (GPT-5) to iteratively transform these tokens into functional React components, build the project architecture, implement TypeScript-based type safety, and define clean Git branching and commit conventions.
+
+ChatGPT further assisted in creating progressive workflow steps for each milestone — from primitives to domain components, API abstraction, and Supabase integration — ensuring technical consistency and adherence to modern frontend practices. It also generated unit tests (Vitest + React Testing Library), structured commit messages, and documentation content such as the README, ensuring that all components were modular, testable, and version-controlled.
+
+Throughout the process, AI acted as a pair programmer and technical guide, helping optimize component logic, database schema design, and the authentication layer using Supabase’s RLS and RPC functions. Every major feature — including role-based access control, mock API transition, and admin inventory panel — was built following AI-generated blueprints, verified, and refined through manual review and testing.
 
 ## License
 
