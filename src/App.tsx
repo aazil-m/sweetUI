@@ -1,75 +1,32 @@
-import './styles/tokens.css';
+import "./styles/tokens.css";
+import { Button, Card } from "./components";
 
 export default function App() {
   return (
     <div
       style={{
-        background: 'var(--sweet-surface)',
-        fontFamily: 'var(--sweet-font-family)',
-        padding: 'var(--sweet-padding)',
+        background: "var(--sweet-surface)",
+        minHeight: "100vh",
+        padding: "var(--sweet-space-4)",
+        fontFamily: "var(--sweet-font-family)",
       }}
     >
-      <h1 style={{ fontSize: 'var(--sweet-text-lg)', color: 'var(--sweet-primary)' }}>
-        SweetUI Design System ✓
-      </h1>
-
-      <div
+      <h1
         style={{
-          background: 'white',
-          boxShadow: 'var(--sweet-elevation-1)',
-          borderRadius: 'var(--sweet-radius-md)',
-          padding: 'var(--sweet-space-3)',
-          marginTop: 'var(--sweet-space-3)',
+          color: "var(--sweet-primary)",
+          fontSize: "var(--sweet-text-lg)",
         }}
       >
-        <p style={{ fontSize: 'var(--sweet-text-sm)' }}>
-          This card is using tokens from your Figma SweetUI system.
-        </p>
+        SweetUI Primitives ⚙️
+      </h1>
 
-        <div
-          style={{
-            display: 'flex',
-            gap: 'var(--sweet-gap)',
-            marginTop: 'var(--sweet-space-2)',
-          }}
-        >
-          <button
-            style={{
-              background: 'var(--sweet-primary)',
-              color: 'white',
-              border: 'none',
-              borderRadius: 'var(--sweet-radius-sm)',
-              padding: '8px 16px',
-            }}
-          >
-            Primary
-          </button>
-
-          <button
-            style={{
-              background: 'var(--sweet-success)',
-              color: 'white',
-              border: 'none',
-              borderRadius: 'var(--sweet-radius-sm)',
-              padding: '8px 16px',
-            }}
-          >
-            Success
-          </button>
-
-          <button
-            style={{
-              background: 'var(--sweet-warning)',
-              color: 'black',
-              border: 'none',
-              borderRadius: 'var(--sweet-radius-sm)',
-              padding: '8px 16px',
-            }}
-          >
-            Warning
-          </button>
+      <Card title="Token-driven Components" style={{ marginTop: "var(--sweet-space-3)" }}>
+        <div style={{ display: "flex", gap: "var(--sweet-gap)" }}>
+          <Button variant="primary">Primary</Button>
+          <Button variant="success">Success</Button>
+          <Button variant="warning">Warning</Button>
         </div>
-      </div>
+      </Card>
     </div>
   );
 }
