@@ -1,0 +1,39 @@
+:root {
+  /* 🎨 Colors */
+  --sweet-primary: #6C5CE7;
+  --sweet-surface: #F8F9FA;
+  --sweet-success: #00B894;
+  --sweet-warning: #FDCB6E;
+
+  /* ✍️  Text sizes (Inter) */
+  --sweet-text-xs: 14px;
+  --sweet-text-sm: 16px;
+  --sweet-text-md: 20px;
+  --sweet-text-lg: 24px;
+  --sweet-text-xl: 32px;
+  --sweet-font-family: "Inter", system-ui, sans-serif;
+
+  /* 📏 Spacing (8-pt scale) */
+  --sweet-space-1: 8px;
+  --sweet-space-2: 16px;
+  --sweet-space-3: 24px;
+  --sweet-space-4: 32px;
+  --sweet-space-5: 40px;
+  --sweet-space-6: 48px;
+  --sweet-space-7: 56px;
+  --sweet-space-8: 64px;
+
+  /* 🧱 Border radius */
+  --sweet-radius-sm: 8px;
+  --sweet-radius-md: 12px;
+  --sweet-radius-lg: 16px;
+
+  /* 🌫️  Elevations */
+  --sweet-elevation-0: none;
+  --sweet-elevation-1: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  --sweet-elevation-2: 0px 4px 12px rgba(0, 0, 0, 0.12);
+
+  /* 🧍 Auto layout defaults */
+  --sweet-gap: 12px;
+  --sweet-padding: 16px;
+}
