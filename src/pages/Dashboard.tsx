@@ -1,22 +1,17 @@
 // src/pages/Dashboard.tsx
 import React from "react";
-import { MockApi, type Sweet } from "../api";
+import { api, type Sweet } from "../api";
 import { SweetCard } from "../domain/SweetCard";
-import { SearchBar, type SearchParams } from "../domain/SearchBar"; // ← import the type
+import { SearchBar, type SearchParams } from "../domain/SearchBar";
 
 export default function Dashboard() {
   const [items, setItems] = React.useState<Sweet[]>([]);
-  const [q, setQ] = React.useState<SearchParams>({
-    name: "",
-    category: "",
-    minPrice: "",
-    maxPrice: "",
-  });
+  const [q, setQ] = React.useState<SearchParams>({ name: "", category: "", minPrice: "", maxPrice: "" });
 
-  React.useEffect(() => { MockApi.listSweets().then(setItems); }, []);
+  React.useEffect(() => { api.listSweets().then(setItems); }, []);
 
   async function onSearch() {
-    const res = await MockApi.searchSweets({
+    const res = await api.searchSweets({
       name: q.name || undefined,
       category: q.category || undefined,
       minPrice: q.minPrice === "" ? undefined : Number(q.minPrice),
@@ -27,7 +22,6 @@ export default function Dashboard() {
 
   return (
     <div>
-      {/* wrap setQ so the param type is exactly SearchParams */}
       <SearchBar value={q} onChange={(next) => setQ(next)} />
       <button onClick={onSearch} style={{ marginTop: 12 }}>Search</button>
 
@@ -37,7 +31,7 @@ export default function Dashboard() {
             key={s.id}
             sweet={s}
             onPurchase={async (id) => {
-              const updated = await MockApi.purchase(id, 1);
+              const updated = await api.purchase(id, 1);
               setItems(prev => prev.map(p => p.id === id ? updated : p));
             }}
           />

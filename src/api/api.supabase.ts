@@ -1,6 +1,7 @@
-import { createClient, type SupabaseClient } from "@supabase/supabase-js";
+import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Api } from "./api";
 import type { Sweet, Id, SearchParams } from "./types";
+import { supabase as sharedClient } from "../auth/supabaseClient";
 
 /** Map DB row → Sweet (coerce numeric to number) */
 function mapSweet(row: any): Sweet {
@@ -16,8 +17,9 @@ function mapSweet(row: any): Sweet {
 export class SupabaseApi implements Api {
   private sb: SupabaseClient;
 
-  constructor(url: string, anonKey: string, sb?: SupabaseClient) {
-    this.sb = sb ?? createClient(url, anonKey);
+  // Prefer the shared client (carries the auth session). url/anonKey kept only for test overrides.
+  constructor(_url?: string, _anonKey?: string, sb?: SupabaseClient) {
+    this.sb = sb ?? sharedClient;
   }
 
   /** READ */
@@ -97,3 +99,7 @@ export class SupabaseApi implements Api {
     return mapSweet(data);
   }
 }
+
+
+
+    
